@@ -1,0 +1,18 @@
+{
+	"/(public)": [],
+	"/": [],
+	"/(public)/docs": [
+		"src/routes/(public)/docs/+page.server.ts"
+	],
+	"/(public)/docs/[slug]": [
+		"src/routes/(public)/docs/[slug]/+page.server.ts"
+	],
+	"/mnemonic": [],
+	"/pairing": [],
+	"/(public)/privacy": [
+		"src/routes/(public)/privacy/+page.server.ts"
+	],
+	"/(public)/terms": [
+		"src/routes/(public)/terms/+page.server.ts"
+	]
+}

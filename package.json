@@ -1,0 +1,45 @@
+{
+  "name": "@sigilauth/web-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "playwright test",
+    "test:unit": "vitest",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.49.1",
+    "@shikijs/markdown-it": "^4.0.2",
+    "@sveltejs/adapter-node": "^5.2.16",
+    "@sveltejs/kit": "^2.16.0",
+    "@sveltejs/vite-plugin-svelte": "^5.0.5",
+    "@types/bun": "latest",
+    "@types/markdown-it": "^14.1.2",
+    "@types/markdown-it-anchor": "^7.0.0",
+    "@types/node": "^25.6.0",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.1",
+    "markdown-it-anchor": "^9.2.0",
+    "svelte": "^5.13.0",
+    "svelte-check": "^4.2.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "vitest": "^4.1.5"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.6",
+    "@noble/curves": "^1.8.1",
+    "hono": "^4.12.14",
+    "zod": "^4.3.6"
+  },
+  "comments": {
+    "i18n": "Paraglide integration blocked by B15 — will add after string catalog complete"
+  }
+}

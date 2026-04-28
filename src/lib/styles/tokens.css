@@ -1,0 +1,284 @@
+/**
+ * Sigil Auth Design Tokens — Dark-First
+ *
+ * Dark is the only brand posture. Legacy demo token names are preserved but
+ * remapped to dark values so older internal routes don't break.
+ */
+
+:root {
+	/* =====================================================================
+	   MOCK TOKENS (new names, used by homepage + docs)
+	   ===================================================================== */
+
+	--bg: #07070c;
+	--bg-raised: #0e0e16;
+	--surface: #141420;
+	--surface-2: #1c1c2a;
+	--border: #252536;
+	--border-bright: #32324a;
+
+	--text: #f5f5f7;
+	--text-muted: #9ca0b0;
+	--text-dim: #636879;
+
+	--primary: #4d88ff;
+	--primary-dim: #3a6fd9;
+	--accent: #3dfce8;
+	--accent-dim: #1fd4c0;
+	--accent-bg: rgba(61, 252, 232, 0.08);
+
+	--success: #00e676;
+	--danger: #ff5a5a;
+	--warning: #ffb300;
+
+	--code-bg: #0a0a12;
+	--code-border: #1a1a28;
+	--code-keyword: #c792ea;
+	--code-string: #50fa7b;
+	--code-number: #ffb86c;
+	--code-comment: #5a5f72;
+	--code-prop: #82aaff;
+
+	/* Typography — system stack, no webfonts */
+	--font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+		sans-serif;
+	--font-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Menlo, Consolas,
+		monospace;
+
+	/* Spacing (4px base) */
+	--s1: 0.25rem;
+	--s2: 0.5rem;
+	--s3: 0.75rem;
+	--s4: 1rem;
+	--s5: 1.25rem;
+	--s6: 1.5rem;
+	--s8: 2rem;
+	--s10: 2.5rem;
+	--s12: 3rem;
+	--s16: 4rem;
+	--s20: 5rem;
+	--s24: 6rem;
+	--s32: 8rem;
+
+	/* Radii */
+	--r-sm: 6px;
+	--r-md: 10px;
+	--r-lg: 14px;
+	--r-xl: 20px;
+
+	/* Motion */
+	--t-fast: 120ms cubic-bezier(0.33, 1, 0.68, 1);
+	--t-base: 200ms cubic-bezier(0.33, 1, 0.68, 1);
+	--t-slow: 320ms cubic-bezier(0.33, 1, 0.68, 1);
+
+	/* =====================================================================
+	   LEGACY TOKENS (internal demo routes — remapped to dark values)
+	   ===================================================================== */
+
+	--color-primary: var(--primary);
+	--color-primary-dark: var(--primary-dim);
+	--color-primary-light: var(--primary);
+
+	--color-danger: var(--danger);
+	--color-danger-dark: #cc3a3a;
+	--color-danger-light: #ff8585;
+
+	--color-success: var(--success);
+	--color-success-dark: #00b359;
+	--color-success-light: #5cffa8;
+
+	--color-warning: var(--warning);
+	--color-warning-dark: #e5a100;
+	--color-warning-light: #ffd166;
+
+	--color-text: var(--text);
+	--color-text-secondary: var(--text-muted);
+	--color-text-tertiary: var(--text-dim);
+
+	--color-surface: var(--bg-raised);
+	--color-surface-secondary: var(--surface);
+	--color-background: var(--bg);
+
+	--color-border: var(--border);
+	--color-border-strong: var(--border-bright);
+
+	--focus-color: var(--accent);
+
+	/* Legacy spacing aliases */
+	--space-1: var(--s1);
+	--space-2: var(--s2);
+	--space-3: var(--s3);
+	--space-4: var(--s4);
+	--space-5: var(--s5);
+	--space-6: var(--s6);
+	--space-8: var(--s8);
+	--space-10: var(--s10);
+	--space-12: var(--s12);
+	--space-16: var(--s16);
+
+	/* Legacy type scale (px-based) */
+	--text-xs: 12px;
+	--text-sm: 14px;
+	--text-base: 16px;
+	--text-lg: 20px;
+	--text-xl: 25px;
+	--text-2xl: 31px;
+	--text-3xl: 39px;
+
+	--leading-xs: 16px;
+	--leading-sm: 20px;
+	--leading-base: 24px;
+	--leading-lg: 28px;
+	--leading-xl: 32px;
+	--leading-2xl: 40px;
+	--leading-3xl: 48px;
+
+	--weight-regular: 400;
+	--weight-medium: 500;
+	--weight-semibold: 600;
+
+	--radius-sm: var(--r-sm);
+	--radius-md: var(--r-md);
+	--radius-lg: var(--r-lg);
+	--radius-full: 9999px;
+
+	--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25);
+	--shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+	--shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.45);
+	--shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.55);
+
+	--transition-fast: var(--t-fast);
+	--transition-base: var(--t-base);
+	--transition-slow: var(--t-slow);
+
+	--z-base: 0;
+	--z-dropdown: 100;
+	--z-sticky: 200;
+	--z-overlay: 300;
+	--z-modal: 400;
+	--z-toast: 500;
+}
+
+/* =====================================================================
+   BASE RESETS
+   ===================================================================== */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: var(--font-sans);
+	font-size: 16px;
+	line-height: 1.55;
+	color: var(--text);
+	background: var(--bg);
+	color-scheme: dark;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	width: 100%;
+	min-height: 100vh;
+	background: var(--bg);
+	color: var(--text);
+}
+
+img,
+video,
+iframe {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+td,
+th {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+::selection {
+	background: var(--accent);
+	color: var(--bg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+/* =====================================================================
+   A11Y
+   ===================================================================== */
+
+:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+	border-radius: var(--r-sm);
+}
+
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	background: var(--surface);
+	color: var(--text);
+	padding: var(--s2) var(--s4);
+	text-decoration: none;
+	font-weight: var(--weight-medium);
+	z-index: var(--z-modal);
+	border-radius: var(--r-sm);
+	border: 1px solid var(--accent);
+}
+
+.skip-link:focus {
+	position: fixed;
+	left: var(--s2);
+	top: var(--s2);
+	width: auto;
+	height: auto;
+	overflow: visible;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
